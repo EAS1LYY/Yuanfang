@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.gujiunet.code'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gujiunet.code"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.5"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        compose true
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.alibaba.android:vlayout:1.3.0'
+    //WebView
+    implementation 'com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.0'
+    implementation 'com.github.xuexiangjys.AgentWeb:agentweb-download:1.0.0'//选填
+    //屏幕适配AutoSize
+
+    implementation 'com.umeng.umsdk:common:9.3.8'
+    implementation  'com.umeng.umsdk:asms:1.2.1'
+//XDIALOG
+    def dialogx_version = "0.0.49"
+    implementation "com.github.kongzue.DialogX:DialogX:${dialogx_version}"
+    def dialogx_sample_version = "0.0.10"
+
+//地址选择对话框
+    implementation "com.github.kongzue.DialogXSample:CityPicker:${dialogx_sample_version}"
+
+//日期选择对话框
+    implementation "com.github.kongzue.DialogXSample:DatePicker:${dialogx_sample_version}"
+
+//分享选择对话框
+    implementation "com.github.kongzue.DialogXSample:ShareDialog:${dialogx_sample_version}"
+
+//自定义联动选择对话框
+    implementation "com.github.kongzue.DialogXSample:CustomWheelPicker:${dialogx_sample_version}"
+
+//回复消息对话框
+    implementation "com.github.kongzue.DialogXSample:ReplyDialog:${dialogx_sample_version}"
+
+//文件选择对话框
+    implementation "com.github.kongzue.DialogXSample:FileDialog:${dialogx_sample_version}"
+
+//抽屉对话框
+    implementation "com.github.kongzue.DialogXSample:DrawerBox:${dialogx_sample_version}"
+
+//照片选择器
+    implementation "com.github.kongzue.DialogXSample:AlbumDialog:${dialogx_sample_version}"
+
+    implementation 'com.github.donkingliang:ImageSelector:2.2.1'
+
+    // PictureSelector basic (Necessary)
+    implementation 'io.github.lucksiege:pictureselector:v3.11.1'
+
+    // image compress library (Not necessary)
+    implementation 'io.github.lucksiege:compress:v3.11.1'
+
+    // uCrop library (Not necessary)
+    implementation 'io.github.lucksiege:ucrop:v3.11.1'
+
+    // simple camerax library (Not necessary)
+    implementation 'io.github.lucksiege:camerax:v3.11.1'
+
+    //轮播
+    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.2.6'
+
+    //刷新
+    implementation 'androidx.appcompat:appcompat:1.6.1'                 //必须 1.0.0 以上
+
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.1.0'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-classics:2.1.0'    //经典刷新头
+    implementation  'io.github.scwang90:refresh-header-radar:2.1.0'       //雷达刷新头
+    implementation  'io.github.scwang90:refresh-header-falsify:2.1.0'     //虚拟刷新头
+    implementation  'io.github.scwang90:refresh-header-material:2.1.0'    //谷歌刷新头
+    implementation  'io.github.scwang90:refresh-header-two-level:2.1.0'   //二级刷新头
+    implementation  'io.github.scwang90:refresh-footer-ball:2.1.0'        //球脉冲加载
+    implementation  'io.github.scwang90:refresh-footer-classics:2.1.0'    //经典加载
+    implementation 'org.apache.commons:commons-lang3:3.11'
+    //implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+}

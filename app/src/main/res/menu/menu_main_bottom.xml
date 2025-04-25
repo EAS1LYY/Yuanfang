@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--底部导航栏-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_main"
+        android:icon="@drawable/main"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/nav_code"
+        android:icon="@drawable/code"
+        android:title="源码" />
+
+    <item
+        android:id="@+id/nav_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/add"
+        android:title="操作" />
+    <item
+        android:id="@+id/nav_comment"
+        android:icon="@drawable/community"
+        android:title="社区" />
+    <item
+        android:id="@+id/nav_user"
+        android:icon="@drawable/ic_menu_person"
+        android:title="我的" />
+
+</menu>

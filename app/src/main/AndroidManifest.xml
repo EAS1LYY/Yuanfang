@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+
+
+
+    <application
+        android:exported="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="源坊"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Code"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="31" >
+        <activity
+            android:name=".nonetwork"
+            android:exported="false"
+            android:label="@string/title_activity_nonetwork"
+            android:theme="@style/Theme.Code" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login" />
+        <activity android:name=".setting"/>
+        <activity android:name=".message"/>
+        <activity android:name=".user_info"/>
+        <activity android:name=".about"/>
+<activity android:name=".code_info"/>
+        <activity android:name=".reg"/>
+        <activity android:name=".img"
+/>
+        <activity android:name=".text_info"/>
+        <activity android:name=".post"/>
+        <activity android:name=".assort"/>
+        <activity android:name=".assort_code"/>
+        <activity android:name=".code_upload"/>
+        <activity android:name=".serch"/>
+
+        <activity android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.gujiunet.code.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                />
+        </provider>
+
+    </application>
+
+</manifest>
+

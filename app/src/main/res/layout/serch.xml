@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-42dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/leave_serch_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_margin="20dp"
+                    app:srcCompat="@drawable/left" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/serch_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="请输入关键词"
+                android:inputType="text"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/serch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_margin="20dp"
+                    app:srcCompat="@drawable/serch" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/serch_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:tabIndicatorColor="@color/Blue">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/serch_nav_software"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/serch_nav_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="源码" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/serch_nav_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/mask"
+            android:orientation="horizontal"></LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

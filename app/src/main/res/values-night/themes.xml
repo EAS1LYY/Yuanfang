@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Code" parent="Theme.Design.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorPrimary">@color/Blue</item>
+        <item name="android:progressTint">#448aff</item>
+        <item name="android:indeterminateTint">#448aff</item>
+        <item name="android:statusBarColor">#FFFFFF</item> <!-- 设置状态栏背景色为白色 -->
+        <item name="android:textColorPrimary">#000000</item> <!-- 设置状态栏上的文本颜色为黑色 -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="Theme.Code" parent="Base.Theme.Code" />
+</resources>

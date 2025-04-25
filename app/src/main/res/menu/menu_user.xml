@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/setting_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:actionLayout="@layout/setting_icon"
+        android:icon="@drawable/setting_icon"
+        android:title="设置"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/message_button"
+        android:actionLayout="@layout/message_icon"
+        android:icon="@drawable/message_icon"
+        android:title="信息"
+        app:showAsAction="always" />
+
+</menu>
